@@ -3,27 +3,25 @@ title: "Troubleshooting"
 tags: ["documentation", "support"]
 ---
 
-# Troubleshooting
+We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
-## Common Issues
+```ts
+const sum = (num1: number, num2: number): number => {
+  return num1 + num2;
+};
 
-Encountering issues with Sidra Edge? Check out these common problems and their solutions:
+console.log(sum(4, 8)); //12
+```
 
-### Connectivity Issues
+You can use Static Generation for many types of pages, including:
 
-- **Problem:** Unable to connect to computing resources.
-- **Solution:** Check your network connection and ensure that your resources are properly configured in the dashboard.
+- Marketing pages
+- Blog posts
+- E-commerce product listings
+- Help and documentation
 
-### Deployment Errors
+You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
 
-- **Problem:** Project deployment fails with an error message.
-- **Solution:** Review the error message for details and troubleshoot accordingly. It could be due to incorrect configurations or missing dependencies.
+On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
 
-### Performance Degradation
-
-- **Problem:** Project performance is slower than expected.
-- **Solution:** Check resource utilization and adjust settings as needed. You may need to allocate additional resources to improve performance.
-
-## Contact Support
-
-If you're unable to resolve an issue on your own, don't hesitate to contact our support team for assistance. We're here to help you get back on track and ensure a smooth experience with Sidra Edge.
+In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
