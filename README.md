@@ -7,10 +7,7 @@ this repo is just a temporarily docs ressources using mdx but be gonna changed l
 ### Videos
 
 - you can add a video component from youtube like this
-<pre>
 
 ```jsx
-&lt;Video id="3hScMLH7B4o" /&gt;
+<Video id="3hScMLH7B4o" />
 ```
-
-</pre>
