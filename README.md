@@ -19,7 +19,7 @@ this repo is just a temporarily docs ressources using mdx but be gonna changed l
 
 ```jsx
 <CustomImage
-  src="https://raw.githubusercontent.com/NourEssalam/sidra-edge-documentations/main/images/temp4.jpeg"
+  src="https://raw.githubusercontent.com/NourEssalam/sidra-edge-documentations/main/images/sidra-edge.jpeg"
   alt="template screenshot for templates documentaion"
 />
 ```
